@@ -1,0 +1,70 @@
+<!-- <div ng-include="'partials/navbar.html'"></div>
+<div class="headerMargin loading" ng-class="{loaded:loads=='loaded'}">
+	<div class="speakerBreakline"></div>
+	<div class="container-fluid speakerBorder" ng-repeat="speaker in speakers" >
+	    <a class="speakerMainDiv" href="#/speakerinfo" ng-click="speakerIndex($index)">
+			<div class="speakerDiv">
+				<img class="speaker_image" src="img/speakers/{{speaker.image}}"></img>
+			</div>
+		
+			<div class="glyphChevronRight">
+				<img height="20px" width="15px" src="img/icons/right-arrow.png"></img>
+			</div>
+			<div class="speakerInfo">
+				<div>
+				    <h4>{{speaker.name}}</h4>
+				</div>
+				<div class="font_size font_color2">{{speaker.known_for}}</div>
+				<div class="font_color">
+					<h6>
+						<img class="mic-float" height="15px" width="10px" src="img/icons/mic-icon.png"></img>
+						<div class="mic-padding">Speaks on "{{speaker.topic}}"</div>
+					</h6> 
+				</div>
+			</div>	
+		</a>
+	</div>
+</div>
+<div class="foot" ng-include="'partials/footer.html'"></div>
+ -->
+<div style="overflow-x:hidden !important; height:{{deviceHeight}}px !important;width:{{deviceWidth}}px !important">
+ <div class="container-fluid speakerDiv" ng-class="{ 'shift-required' : !isCollapsed }" >
+ 	<img id="speaker_image" style="height:{{deviceHeight}}px !important;width:{{deviceWidth}}px !important" src="img/speakers/{{speaker.image}}" ng-class="{ 'shift-required' : !isCollapsed }" >
+
+ 	<div id="speakerUp" ng-class="{ 'shift-required' : !isCollapsed }">
+ 		<div id="speakerMenuIcon" ><button class="glyphicon glyphicon-th-list" ng-click="isCollapsed = !isCollapsed"></button></div>
+ 		Who's Speaking
+ 		<div id="speakerCalendarIcon" ><div class="glyphicon glyphicon-calendar"></div></div>
+ 	</div>
+ 	<div id="speakerDown" ng-class="{ 'shift-required' : !isCollapsed }">
+ 		<div id="speakerName" >{{speaker.name}}</div>
+ 		<div id="speakerKnownFor" >{{speaker.known_for}}</div>
+ 		<div id="whiteLine" ></div>
+ 		<div>
+ 			<div id="speakerArrowBox" >
+ 			<div id="speakerSpeakingOn" >speaking on</div>
+ 			<div id="arrow-right" ></div>
+ 		</div>
+ 			<div id="speakerTopic" >"{{speaker.topic}}"</div>
+ 		</div>
+ 	</div>
+ 		
+
+ </img>
+ </div>
+
+  <div class="nav-collapse" ng-show="!isCollapsed" style="background-color:black; height:{{deviceHeight}}px !important;"
+            ng-class="{'up':!isCollapsed}">
+                <ul class="nav">
+                    <li><a href="#"><i class="icon-home icon-white"></i> Home</a>
+                    </li>
+                    <li><a href="#">Lessons</a>
+                    </li>
+                    <li><a href="#">Grades</a>
+
+                    </li>
+                </ul>
+               
+            </div>
+    
+</div>
